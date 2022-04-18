@@ -10,6 +10,7 @@ const componentName = (props) => {
                 <Link to="/home">HOME</Link>
                 <Link to="/checkout">CHECKOUT</Link>
                 <Link to="/blogs">BLOGS</Link>
+                <Link to="/about">ABOUT ME</Link>
             </nav>
         </div>
     );

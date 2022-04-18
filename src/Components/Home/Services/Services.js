@@ -14,8 +14,8 @@ const ComponentName = (props) => {
 
     return (
         <div>
-            <h1 className='text-center'>OUR <span className='text-danger'>SERVICES</span></h1>
-            <div className="services-container">
+            <h1 className='text-center py-4'>OUR <span className='text-danger'>SERVICES</span></h1>
+            <div className="services-container container">
             {
                 services.map(service => <Service
                     key={service.id}

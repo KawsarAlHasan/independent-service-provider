@@ -1,12 +1,13 @@
 import React from 'react';
 import Services from './Services/Services';
+import Banner from './Banner/Banner';
 
 const componentName = (props) => {
     return (
-        <div>
-            <p>this is home</p>
+        <>
+            <Banner></Banner>
             <Services></Services>
-        </div>
+        </>
     );
 };
 

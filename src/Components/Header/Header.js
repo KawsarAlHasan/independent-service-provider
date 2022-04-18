@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 
 const componentName = (props) => {
     return (
-        <div className="text-center navber">
-            <nav>
-                <Link to="/home">Home</Link>
-                <Link to="/checkout">Checkout</Link>
+        <div className="text-center navber sticky-top">
+            <nav className='py-3 bg-light'>
+                <Link to="/home">HOME</Link>
+                <Link to="/checkout">CHECKOUT</Link>
+                <Link to="/blogs">BLOGS</Link>
             </nav>
         </div>
     );

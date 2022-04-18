@@ -5,7 +5,7 @@ import img from '../images/not-found.jpg';
 const componentName = (props) => {
     return (
         <div>
-            <img className='w-100 h-50' src={img} alt="" />
+            <img className='img-fluid' src={img} alt="" />
         </div>
     );
 };

@@ -13,7 +13,7 @@ const ComponentName = (props) => {
     }, [])
 
     return (
-        <div>
+        <div id='#serv'>
             <h1 className='text-center py-4'>OUR <span className='text-danger'>SERVICES</span></h1>
             <div className="services-container container">
             {

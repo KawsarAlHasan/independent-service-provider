@@ -1,11 +1,7 @@
-.navber nav{
-    background-color: rgb(215, 203, 203);
-    height: 34px;
-}
 .navber nav a{
     margin-right: 20px;
     text-decoration: none;
-    color: rgb(42, 51, 134);
+    color: rgb(78, 94, 240);
     font-weight: 500;
     font-size: 1.2rem;
 }

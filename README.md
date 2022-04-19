@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Independend Sports Photographer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site [Independend Sports Photographer](https://timely-frangollo-7ebbce.netlify.app/).
+
+## This is what I did at Assignment
+I am doing all the work except the bonus work of this assignment..\
+Google Login is not working properly for using NetLife..\
+Everything else is working fine.
+
+## What I have used in this Assignment
+1. Firebase.\
+2. Bootstrap.\
+3. Netlify.\
+4. React Route etc.
 
 ## Available Scripts
 

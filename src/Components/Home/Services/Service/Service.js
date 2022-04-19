@@ -7,8 +7,8 @@ const Service = ({service}) => {
 
     const navigate = useNavigate();
 
-    const navigateRegister = evant => {
-        navigate('/register');
+    const navigateCheckout = evant => {
+        navigate('/checkout');
     }
 
     return (
@@ -17,7 +17,7 @@ const Service = ({service}) => {
             <h2>{name}</h2>
             <h6>Price: $ {price}</h6>
             <p>{description}</p>
-            <button className='btn btn-primary'><Link to="/register" className='text-light text-decoration-none' onClick={navigateRegister}>Checkout</Link> {name}</button>
+            <button className='btn btn-primary'><Link to="/checkout" className='text-light text-decoration-none' onClick={navigateCheckout}>Checkout {name}</Link></button>
         </div>
     );
 };

@@ -1,23 +1,36 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 
 const Register = (props) => {
 
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
     const navigate = useNavigate();
 
-    const handleSubmit = evan => {
-        evan.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-        console.log(email, password);
+    if (user) {
+        navigate('/checkout');
     }
 
-    const navigateLogin = evant => {
+    const handleSubmit = even => {
+        even.preventDefault();
+        const name = even.target.name.value;
+        const email = even.target.email.value;
+        const password = even.target.password.value;
+        console.log(name, email, password);
+
+        createUserWithEmailAndPassword(email, password);
+    }
+
+    const navigateLogin = () => {
         navigate('/login');
     }
 
@@ -27,17 +40,17 @@ const Register = (props) => {
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Your Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Name"/>
+                    <Form.Control type="text" name='name' placeholder="Enter Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
+                    <Form.Control type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
+                    <Form.Control type="password" name='password' placeholder="6 digit Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />

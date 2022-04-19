@@ -5,6 +5,8 @@ import Home from './Components/Home/Home';
 import Checkout from './Components/Checkout/Checkout';
 import Blogs from './Components/Blogs/Blogs';
 import About from './Components/About/About';
+import Login from './Components/Login/Login/Login';
+import Register from './Components/Login/Register/Register';
 import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -19,6 +21,8 @@ function App() {
         <Route path='/checkout' element={<Checkout></Checkout>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

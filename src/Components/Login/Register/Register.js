@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Register = (props) => {
@@ -52,14 +53,14 @@ const Register = (props) => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="6 digit Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
             <p>Already have an  account? <Link to="/login" className='text-danger text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <div className='py-3'>
+                <SocialLogin></SocialLogin>
+            </div>
         </div>
     );
 };
